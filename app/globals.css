@@ -63,9 +63,6 @@ body {
 .powered-by a {
 	opacity: 0.9;
 	color: var(--font-color);
-	text-decoration-line: underline;
-	text-decoration-style: dashed;
-	text-underline-offset: 3px;
 }
 
 .example a {
@@ -135,6 +132,28 @@ body {
 .input-container button a {
 	color: #ededed !important;
 	text-decoration: none !important;
+}
+
+.fetch-error {
+	text-align: center;
+	padding: 40px 20px;
+}
+
+.fetch-error h2 {
+	margin-bottom: 16px;
+	color: #d1242f;
+}
+
+.fetch-error p {
+	margin: 8px 0;
+	opacity: 0.85;
+}
+
+.fetch-error code {
+	padding: 2px 8px;
+	border-radius: 6px;
+	background: rgba(128, 128, 128, 0.15);
+	word-break: break-all;
 }
 
 @media (max-width: 767px) {

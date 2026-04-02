@@ -1,16 +1,17 @@
-# Markdown Viewer
+# Markdown URL Preview
 https://markdown-viewer-one.vercel.app
 
-Markdown Viewer is a simple web application that allows you to view and parse online markdown files. You can simply provide the URL of the markdown file you want to view, and the application will render the markdown content for you.
+Markdown URL Preview is a simple web application that converts online markdown file URLs into beautifully rendered preview pages. Just provide the URL of any markdown file, and get a shareable preview link instantly.
 
 ## Features
- - View and parse online markdown files (also supported github markdown files)
+ - Convert any online markdown URL into a rendered preview page
+ - Support for GitHub markdown files
  - Easy to use
  - Open source
 
 ## How to use
  - Just open https://markdown-viewer-one.vercel.app/?url=[YOUR_MARKDOWN_ONLINE_FILE]
- - Here is a demo: https://markdown-viewer-one.vercel.app/?url=https://github.com/Emiyaaaaa/markdown-viewer/blob/main/README.md
+ - Here is a demo: https://markdown-viewer-one.vercel.app/?url=https://github.com/Emiyaaaaa/markdown-url-preview/blob/main/README.md
 
 ## Contributing
 feel free to contribute anything or report any issues you find.

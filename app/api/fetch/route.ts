@@ -6,13 +6,21 @@ export async function GET(request: NextRequest) {
 	if (!url) {
 		return new Response("url is required", { status: 400 });
 	}
-	const data = await fetch(url).then((res) => res.text());
-
-	const json = { data };
-
-	return new Response(JSON.stringify(json), {
-		headers: {
-			"Content-Type": "application/json"
+	try {
+		const res = await fetch(url);
+		if (!res.ok) {
+			return Response.json(
+				{ error: `Failed to fetch: ${res.status} ${res.statusText}` },
+				{ status: res.status },
+			);
 		}
-	});
+		const data = await res.text();
+		return Response.json({ data });
+	} catch (err) {
+		const message = err instanceof Error ? err.message : "Unknown error";
+		return Response.json(
+			{ error: `Failed to fetch URL: ${message}` },
+			{ status: 502 },
+		);
+	}
 }

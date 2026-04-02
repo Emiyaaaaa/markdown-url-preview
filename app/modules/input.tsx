@@ -32,8 +32,8 @@ export default function Input() {
 					</p>
 					<p>
 						Github markdown:{" "}
-						<a href="/?url=https://github.com/Emiyaaaaa/markdown-viewer/blob/main/README.md">
-							https://github.com/Emiyaaaaa/markdown-viewer/blob/main/README.md
+						<a href="/?url=https://github.com/Emiyaaaaa/markdown-url-preview/blob/main/README.md">
+							https://github.com/Emiyaaaaa/markdown-url-preview/blob/main/README.md
 						</a>
 					</p>
 					<p>

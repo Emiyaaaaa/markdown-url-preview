@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Markdown online viewer",
-  description: "parse markdown links and view them online",
-  keywords: ["markdown", "viewer", "online"],
+  title: "Markdown URL Preview",
+  description: "Convert markdown URLs into beautifully rendered preview pages",
+  keywords: ["markdown", "url", "preview", "online", "render"],
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 import rehypeSanitize from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
-import remarkHtml from "remark-html";
+import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { decodeUnicodeEscapes } from "unicode-escapes";
@@ -8,10 +8,11 @@ import { unified } from "unified";
 
 export function parseMarkdown(markdownText: string) {
 	const file = unified()
-		.use(remarkParse) // Convert into markdown AST
-		.use(remarkRehype) // Transform to HTML AST
-		.use(rehypeSanitize) // Sanitize HTML input
-		.use(rehypeStringify) // Convert AST into serialized HTML
+		.use(remarkParse)
+		.use(remarkGfm)
+		.use(remarkRehype)
+		.use(rehypeSanitize)
+		.use(rehypeStringify)
 		.processSync(markdownText);
 
 	return String(file);
