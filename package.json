@@ -1,34 +1,34 @@
 {
-	"name": "markdown-url-preview",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"build": "next build",
-		"dev": "next dev -p 3005",
-		"lint": "next lint",
-		"start": "next start"
-	},
-	"dependencies": {
-		"github-markdown-css": "^5.5.1",
-		"next": "^15.0.5",
-		"react": "^18",
-		"react-dom": "^18",
-		"rehype-sanitize": "^6.0.0",
-		"rehype-stringify": "^10.0.1",
-		"remark-gfm": "^4.0.1",
-		"remark-html": "^16.0.1",
-		"remark-parse": "^11.0.0",
-		"remark-rehype": "^11.1.1",
-		"unicode-escapes": "^1.0.0",
-		"unified": "^11.0.5"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@emiyaaaaa/biomeconfig": "^1.3.0",
-		"@emiyaaaaa/tsconfig": "^1.0.2",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
-		"typescript": "^5"
-	}
+  "name": "markdown-url-preview",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev -p 3005",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "github-markdown-css": "^5.5.1",
+    "next": "15.0.7",
+    "react": "^18",
+    "react-dom": "^18",
+    "rehype-sanitize": "^6.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-html": "^16.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
+    "unicode-escapes": "^1.0.0",
+    "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@emiyaaaaa/biomeconfig": "^1.3.0",
+    "@emiyaaaaa/tsconfig": "^1.0.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
 }
