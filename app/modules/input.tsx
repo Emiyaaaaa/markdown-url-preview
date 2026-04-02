@@ -1,8 +1,17 @@
 "use client";
 import { useState } from "react";
+import { Tooltip } from "../components/tooltip";
+import StarBorder from "../components/star-border";
 
 export default function Input() {
 	const [value, setValue] = useState("");
+	const [loading, setLoading] = useState(false);
+
+	const handleClick = () => {
+		if (!value || loading) return;
+		setLoading(true);
+		window.location.href = `/?url=${value}`;
+	};
 
 	return (
 		<>
@@ -12,36 +21,56 @@ export default function Input() {
 						placeholder="https://example.md"
 						autoFocus
 						className=""
+						value={value}
 						onChange={(e) => setValue(e.target.value)}
+						onKeyDown={(e) => e.key === "Enter" && handleClick()}
 					/>
-					<button type="button">
-						<a href={`/?url=${value}`}>GO</a>
-					</button>
+					{loading ? <span className="spinner" /> :
+					<StarBorder as="div" onClick={handleClick} color="white" speed="6s" borderRadius={10}>
+						Get Preview Link
+					</StarBorder>
+					}
 				</div>
 				<p>
 					Input a online markdown file uri, get a online preview markdown link.
 				</p>
 				<br />
+				<br />
 				<div className="example">
 					<strong>Example: </strong>
-					<p>
+					<div className="example-item">
 						Github profile:{" "}
-						<a href="/?url=https://github.com/Emiyaaaaa/Emiyaaaaa/blob/main/README.md">
-							https://github.com/Emiyaaaaa/Emiyaaaaa/blob/main/README.md
-						</a>
-					</p>
-					<p>
+						<Tooltip content="Click to try this">
+							<span
+								className="example-link"
+								onClick={() => setValue("https://github.com/Emiyaaaaa/Emiyaaaaa/blob/main/README.md")}
+							>
+								https://github.com/Emiyaaaaa/Emiyaaaaa/blob/main/README.md
+							</span>
+						</Tooltip>
+					</div>
+					<div className="example-item">
 						Github markdown:{" "}
-						<a href="/?url=https://github.com/Emiyaaaaa/markdown-url-preview/blob/main/README.md">
-							https://github.com/Emiyaaaaa/markdown-url-preview/blob/main/README.md
-						</a>
-					</p>
-					<p>
+						<Tooltip content="Click to try this">
+							<span
+								className="example-link"
+								onClick={() => setValue("https://github.com/Emiyaaaaa/markdown-url-preview/blob/main/README.md")}
+							>
+								https://github.com/Emiyaaaaa/markdown-url-preview/blob/main/README.md
+							</span>
+						</Tooltip>
+					</div>
+					<div className="example-item">
 						Npm package markdown:{" "}
-						<a href="/?url=https://unpkg.com/next-routes-list@latest/README.md">
-							https://unpkg.com/next-routes-list@latest/README.md
-						</a>
-					</p>
+						<Tooltip content="Click to try this">
+							<span
+								className="example-link"
+								onClick={() => setValue("https://unpkg.com/next-routes-list@latest/README.md")}
+							>
+								https://unpkg.com/next-routes-list@latest/README.md
+							</span>
+						</Tooltip>
+					</div>
 				</div>
 			</main>
 		</>
