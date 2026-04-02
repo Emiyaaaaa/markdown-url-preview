@@ -89,11 +89,10 @@ export default function Markdown(props: { url: string }) {
 				<div dangerouslySetInnerHTML={{ __html }} />
 			</main>
 			<footer className="powered-by">
+				<span>Powered by </span>
 				<a href="https://github.com/Emiyaaaaa/markdown-url-preview">
 					markdown-url-preview
 				</a>
-				<span> powered by </span>
-				<a href="https://github.com/Emiyaaaaa">emiya</a>
 			</footer>
 		</>
 	);
